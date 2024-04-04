@@ -19,9 +19,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run fruit_barchart and generate output
+    - name: Run scatter_plot and generate output
       run: |
-        python fruit_barchart.py
+        python scatter_plot.py
 
     - name: Commit and push if there's a new output
       run: |
@@ -29,4 +29,4 @@ jobs:
         git config --local user.name "lingeshperakasam"
         git add -f output.png
         git commit -m "Add generated output file" || exit 0   
-        git push --set-upstream origin main -o "Authorization: Bearer ${{ secrets.QS_2 }}"
+        git push --set-upstream origin main -o "Authorization: Bearer ${{ secrets.QS_1 }}"
